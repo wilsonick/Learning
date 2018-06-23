@@ -1,0 +1,5 @@
+import scipy
+
+p = poly1d([3,3,3])
+
+print(p)

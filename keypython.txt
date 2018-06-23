@@ -1,0 +1,40 @@
+and
+not
+or
+
+if
+while
+for
+try
+with
+
+as
+assert
+async[note 1]
+await[note 1]
+break
+class
+continue
+def
+del
+elif
+else
+except
+exec[note 2]
+finally
+from
+global
+import
+in
+is
+lambda
+None
+nonlocal[note 3]
+pass
+print[note 2]
+raise
+return
+yield
+
+True[note 3]
+False[note 3]

@@ -1,0 +1,41 @@
+player1accept = [10,-10]
+player1deny = [100,-32450]
+player1scores = 0
+
+player2accept = [10,-398]
+player2deny = [100,-13298]
+player2scores = 0
+
+# Round 1
+
+player1round1 = 'accept'
+player2round1 = 'accept'
+
+# Round 2
+
+player1round2 = 'deny'
+player2round2 = 'accept'
+
+# Execute Round 1...... Fight! 
+
+if player1round1 == 'accept':
+    player1scores = player1scores + player1accept[1]
+    player2scores = player2scores + player2accept[2]
+else:
+    # Player 1 denies
+    player1scores = player1scores + player1deny[1]
+    player2scores = player2scores + player2deny[2]
+
+
+if player2round1 == 'accept':
+    player1scores = player1scores + player1accept[1]
+    player2scores = player2scores + player2accept[2]
+else:
+    # Player 2 denies
+    player1scores = player1scores + player1deny[1]
+    player2scores = player2scores + player2deny[2]
+
+
+# Display scores
+
+print(player1scores, player2scores)
