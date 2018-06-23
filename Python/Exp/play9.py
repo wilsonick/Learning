@@ -78,3 +78,61 @@ print( format( 'sup' ))
 
 print( globals())
 
+list1 = ['London','Mayfair','Piccadilly']
+
+print( hasattr(list1, 'London'))  #????
+
+print( hash('hello'))
+
+print( hash('sweet'))
+
+# print( help(str))
+
+print( hex(100))
+
+print( hex(126))
+
+print( hex(20))
+
+print( id('help'))
+
+# firstin = input('How are you?')
+
+# print(firstin)
+
+print( int('425890abcdef',16))
+
+print( int('abcbabcab',13))
+
+# print( int('abcbabcab',12))
+
+print( len('Hello') )
+
+print( len( (1,2) ) )
+
+print( len( [1,2,3,4] ) )
+
+print( len( {'hi' : 2, 'ih' : 3} ) )
+
+print( locals() )
+
+print( map( 2 , [1,2] ) )
+
+print( max( [100,1,101] ) )
+
+# memview = memoryview(h'hi')
+
+print( min( [423,243,77686] ) )
+
+print( min( 'abc' ) )
+
+print( min( 'hello' ) )
+
+# print( next( [1,2,3] ) ) 
+
+print( oct( 48 ) )
+
+print( oct( 24 ) )
+
+# open()
+
