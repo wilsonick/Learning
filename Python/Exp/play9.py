@@ -134,5 +134,24 @@ print( oct( 48 ) )
 
 print( oct( 24 ) )
 
-# open()
+opened = open("passwordsfile")
+print(opened)
+
+print( ord('a') )
+
+print( ord('r') )
+
+print( pow(3,3) )
+
+print( pow(4,4) )
+
+print( pow(2+4,1+2) )
+
+print( pow(5,-3) )
+
+print(print('hi'))
+
+print( list(range( 10,60,2 ) ) )
+
+print( sum( list( range(20) ) ) )
 
