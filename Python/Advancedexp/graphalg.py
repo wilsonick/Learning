@@ -1,30 +1,47 @@
 
 ################################## SIMPLE GRAPH ALGORITHMS ###########################
 
-first_graph_vertex = ['London','Brisbane','Paris']
+places = ['London','Brisbane','Paris','Milan','NYC']
 
-first_graph_edge = [['London','Paris'],['Paris','London'],['Brisbane','Brisbane']]
+flights = [['London','Paris'],['Paris','London'],['Brisbane','Paris'],['Milan','London'],['NYC','Milan']]
 
 # How many unique flights can I go on around my 'world'?
 
-print(len(first_graph_edge))
+print(len(flights))
 
-# Can I go one-way from Brisbane to Paris?
+# Can I go one-way from Brisbane to Paris? (Flight availability checker)
 
-for i in range(len(first_graph_edge)):
-    if first_graph_edge[i] == ['Brisbane','Paris']:
+found = 0
+for i in range(len(flights)):
+    if flights[i] == ['Brisbane','Paris']:
+        found = 1
         print('Yes, you can')
-    else:
-        print('No, you can\'t')
+
+if found == 0:
+    print('No, you can\'t')
+
 
 # Are there any return flights?
 
-print(range(len(first_graph_edge)))
+# For each departure and arrival combination, see if the flipped version exists
+
 
 
 '''
-for i in range(len(first_graph_edge)):
-    for j in range(len(first_graph_edge[1])):
-        if first_graph_edge[i][j] == [[j],[i]]:
+for i in range(len(flights)):
+    for j in range(0,1):
+        if ( (flights[i][0] == flights[i][1])
+        and (flights[j][0] == flights[j][1]) ):
             print('Found a return flight!')
+
+print(flights[0][1])
+'''
+
+'''
+for i in range(len(first_graph_edge)):
+    for j in range(len(first_graph_edge)):
+        if (first_graph_edge[i][1] == first_graph_edge[i][2])
+        and (first_graph_edge[j][1] == first_graph_edge[j][2]):
+            print('Found a return flight!')
+
 '''
