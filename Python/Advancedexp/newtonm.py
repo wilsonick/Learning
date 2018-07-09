@@ -25,9 +25,10 @@ print(f2(3))
 
 
 
-x0 = 1.0
+x0 = -5.0
 x1 = 5.0
 spacing = 0.1
+threshold = 0.05
 
 x_num = math.floor( (x1 - x0) / spacing )
 
@@ -49,14 +50,15 @@ for i in range(x_num+1):
     diffy[i] = df1(x[i])
     
 
-root[0] = 0.2
-    
+root[0] = 1.5
+
 for i in range(x_num):
-    root[i+1] = root[i] - y[i]/diffy[i]
+    root[i+1] = root[i] - (y[i] / diffy[i])
+    if (root[i+1] - root[i]) <= threshold:
+        print('Break found according to threshold at', root[i])
 
 
 
-    
 #x = np.arange(x0,x1,spacing)
 # x = list(range(x0,x1,spacing))
 # y = [x * spacing for x in range(x0,x1)]
@@ -69,6 +71,8 @@ print(diffy)
 
 
 print(root)
+
+
 
 '''
 
